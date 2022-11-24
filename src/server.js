@@ -5,8 +5,6 @@ import cors from "cors";
 import errorhandler from "./middleware/errorhandler.js";
 dotenv.config();
 
-const PORT = process.env.PORT || 7000;
-
 const app = express();
 console.log(process.env.NODE_ENV);
 app.use(cors());
@@ -18,5 +16,7 @@ app.all("/*", (req, res) => {
         message: req.url + "not found",
     });
 });
+
+const PORT = process.env.PORT || 7000;
 
 app.listen(PORT, console.log(PORT));
