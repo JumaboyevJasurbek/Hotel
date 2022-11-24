@@ -9,7 +9,7 @@ import galary from "./galary.js";
 const GalaryRoutes = Router();
 
 export default GalaryRoutes
-    .get("/galary", galary.GET)
-    .post("/galary", validation(GalaryPostSchema), galary.POST)
-    .put("/galary/:id", validation(GalaryPutSchema), galary.PUT)
-    .delete("/galary/:id", galary.DELETE);
+    .get("/galery", galary.GET)
+    .post("/galery", validation(GalaryPostSchema), galary.POST)
+    .put("/galery/:id", validation(GalaryPutSchema), galary.PUT)
+    .delete("/galery/:id", galary.DELETE);

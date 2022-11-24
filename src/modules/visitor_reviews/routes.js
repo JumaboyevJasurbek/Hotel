@@ -4,19 +4,20 @@ import {
     VisitorReviewsPostSchema,
     VisitorReviewsPutSchema,
 } from "../../validation/validation.js";
+import visitor_reviews from "./visitor_reviews.js";
 
 const visitorReviewsRoutes = Router();
 
 export default visitorReviewsRoutes
-    .get("/visitorReviews", visitorReviews.GET)
+    .get("/visitor_reviews", visitor_reviews.GET)
     .post(
-        "/visitorReviews",
+        "/visitor_reviews",
         validation(VisitorReviewsPostSchema),
-        visitorReviews.POST
+        visitor_reviews.POST
     )
     .put(
-        "/visitorReviews/:id",
+        "/visitor_reviews/:id",
         validation(VisitorReviewsPutSchema),
-        visitorReviews.PUT
+        visitor_reviews.PUT
     )
-    .delete("/visitorReviews/:id", visitorReviews.DELETE);
+    .delete("/visitor_reviews/:id", visitor_reviews.DELETE);

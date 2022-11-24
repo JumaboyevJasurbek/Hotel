@@ -1,9 +1,10 @@
 import { Router } from "express";
 import validation from "../../middleware/validation.js";
-// import {
-//     RoomsOurPostSchema,
-//     RoomsOurPutSchema,
-// } from "../../validation/validation.js";
+import {
+    RoomsOurPostSchema,
+    RoomsOurPutSchema,
+} from "../../validation/validation.js";
+import rooms_our from "./rooms_our.js";
 
 const roomsOurRoutes = Router();
 

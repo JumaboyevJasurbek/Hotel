@@ -32,34 +32,28 @@ export const FormContactPutSchema = Joi.object({
 
 // ? Galary
 export const GalaryPostSchema = Joi.object({
-    image_galary: Joi.string().required(),
+    image_galery: Joi.string().required(),
 }).required();
 
 export const GalaryPutSchema = Joi.object({
-    image_galary: Joi.string(),
+    image_galery: Joi.string(),
 }).required();
 
 // ? News
 export const NewsPostSchema = Joi.object({
-    phone_number: Joi.string().required(),
-    room: Joi.string().required(),
-    kids: Joi.string().required(),
-    adults: Joi.string().required(),
-    check_in: Joi.string().required(),
-    departure: Joi.string().required(),
+    image_news: Joi.string().required(),
+    news_title: Joi.string().required(),
+    news_description: Joi.string().required(),
 }).required();
 
 export const NewsPutSchema = Joi.object({
-    phone_number: Joi.string(),
-    room: Joi.string(),
-    kids: Joi.string(),
-    adults: Joi.string(),
-    check_in: Joi.string(),
-    departure: Joi.string(),
+    image_news: Joi.string(),
+    news_title: Joi.string(),
+    news_description: Joi.string(),
 }).required();
 
 // ? RoomOur
-export const RoomOurPostSchema = Joi.object({
+export const RoomsOurPostSchema = Joi.object({
     image_room: Joi.string().required(),
     title_room: Joi.string().required(),
     area_room: Joi.string().required(),
@@ -67,7 +61,7 @@ export const RoomOurPostSchema = Joi.object({
     cost_night: Joi.string().required(),
 }).required();
 
-export const RoomOurPutSchema = Joi.object({
+export const RoomsOurPutSchema = Joi.object({
     image_room: Joi.string(),
     title_room: Joi.string(),
     area_room: Joi.string(),
@@ -77,13 +71,13 @@ export const RoomOurPutSchema = Joi.object({
 
 // ? VisitorReviews
 export const VisitorReviewsPostSchema = Joi.object({
-    avatar_images: Joi.string(),
+    avatar_image: Joi.string(),
     description: Joi.string(),
     date: Joi.string(),
 }).required();
 
 export const VisitorReviewsPutSchema = Joi.object({
-    avatar_images: Joi.string(),
+    avatar_image: Joi.string(),
     description: Joi.string(),
     date: Joi.string(),
 }).required();

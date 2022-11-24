@@ -11,11 +11,11 @@ const NEW_GALARY = `
 `;
 
 const UPDATE_GALARY = `
-    UPDATE galery SET image_galery = $1 WHERE galery_id = $7 RETURNING *
+    UPDATE galery SET image_galery = $1 WHERE galery_id = $2 RETURNING *
 `;
 
 const DELETE_GALARY = `
-DELETE FROM contacts where galery_id = $1`;
+DELETE FROM galery where galery_id = $1`;
 
 export const allGalary = () => fetchData(ALL_GALARY);
 
@@ -23,19 +23,19 @@ export const createGalary = (image_galery) =>
     fetchData(NEW_GALARY, image_galery);
 
 export const updateGalary = async (image_galery, id) => {
-    const [oldContacts] = await fetchData(
-        "SELECT * FROM contacts where galery_id = $1",
+    const [oldGalery] = await fetchData(
+        "SELECT * FROM galery where galery_id = $1",
         id
     );
 
     return fetchData(
         UPDATE_GALARY,
-        image_galery ? image_galery : oldContacts.image_galery,
+        image_galery ? image_galery : oldGalery.image_galery,
         id
     );
 };
 export const deleteGalary = async (id) => {
-    await fetchData("SELECT * FROM contacts where galery_id = $1", id);
+    await fetchData("SELECT * FROM galery where galery_id = $1", id);
 
     return fetchData(DELETE_GALARY, id);
 };

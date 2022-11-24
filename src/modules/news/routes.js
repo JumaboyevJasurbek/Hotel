@@ -1,9 +1,7 @@
 import { Router } from "express";
 import validation from "../../middleware/validation.js";
-// import {
-//     NewsPostSchema,
-//     NewsPutSchema,
-// } from "../../validation/validation.js";
+import news from "./news.js";
+import { NewsPostSchema, NewsPutSchema } from "../../validation/validation.js";
 
 const newsRoutes = Router();
 

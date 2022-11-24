@@ -12,7 +12,7 @@ const NEW_FORM_CONTACTS = `
 `;
 
 const UPDATE_FORM_CONTACTS = `
-    UPDATE form_contact SET email = $1,  phone_number = $2 WHERE  form_contact_id = $3 RETURNING *
+    UPDATE form_contact SET email = $1, phone_number = $2 WHERE  form_contact_id = $3 RETURNING *
 `;
 
 const DELETE_CONTACTS = `
